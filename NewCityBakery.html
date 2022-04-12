@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New City Bakery</title>
+    
+    <script src="NCBscript.js"></script>
+    <link rel="stylesheet" href="NCBstyles.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Caveat:wght@600&family=Great+Vibes&family=Montserrat:wght@200;700;800&family=Sacramento&family=Tangerine:wght@700&display=swap" rel="stylesheet">
+</head>
+<!-- lab assignment #8 Heshan Punchihewa -->
+<body>
+    
+    <header> <img class="logo" src="photos/cake.png" alt="Bakery Logo"> New City Bakery </header>
+    <div class="address">245 Chinook Centre (2nd floor North) Calgary, AB  ||  587 588 9090  ||  orders@ncbakery.ca</div>
+    
+    <div class="container">
+        <form onsubmit="printToPage();return false">
+        
+        
+        <div class="customerInfo">
+            <label class="formTxt" for="firstName">First Name</label><br>
+            
+            <input name="firstName" class="input" type="text" id="firstName" maxlength="25" pattern="[A-Za-z- ]{1,30}"  title="Accepts alphabetical characters and hyphens" placeholder="John" autofocus required ><br>
+            
+            <label class="formTxt" for="lastName">Last Name</label><br>            
+            <input name="lastName" class="input" type="text" id="lastName" maxlength="25" pattern="[A-Za-z- ]{1,30}"  title="Accepts alphabetical characters and hyphens" placeholder="Smith" required><br>
+            
+            <label class="formTxt" for="tel">Contact Number</label><br>
+            <input name="tel" class="input" type="tel" id="tel"  pattern="[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="587-123-1234" required> <br>
+            
+            <label class="formTxt" for="address">Address</label><br>
+            <input name="address" class="input" type="text" id="address" maxlength="50"  title="Enter valid address" placeholder="245 Chinook Centre, Calgary, AB" required ><br>
+            
+            <label class="formTxt" for="postalCode">Postal Code</label><br>
+            <input name="postalCode" class="input" type="text" id="postalCode" pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" Title="Enter valid address" placeholder="T1K Y9K" required><br>
+            
+            <label class="formTxt" for="email">E-mail Address</label><br>
+            <input name="email" class="email" type="email" id="email" placeholder="L.James@mail.com" required > <br>
+            <div class="cakes">
+                
+                <label class="formTxt">Select Type of Cake:</label><br>
+                <button value="Sheet" onclick="sheetCakeForm(); return false">Sheet Cake</button><br>
+                <button value="Round" onclick="roundCakeForm(); return false">Round Cake</button>
+                
+                
+            </div>
+        </div>
+        
+        <!-- print out here -->
+        <div id="orderForm"></div>
+        
+        <div class="output-wrap">
+        <div id="PrintCusInfo"></div>
+        <div id="orderSummary">
+        </div>
+        </div>
+    </form>
+        
+    </div>
+    
+    
+</body>
+</html>
